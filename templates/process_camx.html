@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+{% if st=="2" %}
+<h3 style="color:#006633">{{det}}</h3>
+
+
+{% elif st=="1" %}
+<h3 style="color:#006633">{{det}}</h3>
+<embed src="../static/audio/{{afile}}" width="20" height="20" autostart="true"></embed>
+	
+	{% if sms=="1" %}
+	<iframe src="http://iotcloud.co.in/testsms/sms.php?sms=emr&name=Farmer&mess={{mess}}&mobile={{mobile}}" width="10" height="10" ></iframe>
+	{% endif %}
+{% endif %}
+
+
+
+<script>
+						setTimeout(function () {
+						   //Redirect with JavaScript
+						  window.location.href="/process_camx";
+						}, 5000);
+						</script>
+
+</body>
+</html>
